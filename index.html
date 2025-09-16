@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- [Delete this comment] This file is the main file for the challenge. For the most part, you should be editing this file. -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hero Section | Product Details Section</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- import fontawesome -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--import Material Icons  -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  rel="stylesheet"
+/>
+
+    <!-- Tailwind CDN allows you to use Tailwind classes immediately in your HTML without any installation steps. 
+      If you're not using Tailwind, you may delete the <script> -->
+    <!-- Get started on Tailwind: https://tailwindcss.com/docs/installation/play-cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="icon" href="img/favicon.ico" sizes="any" />
+    <!-- import remix icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <!-- import Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.3.0/fonts/remixicon.css" rel="stylesheet">
+        <!-- import alpine.js -->
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+  </head>
+  <body
+    class="h-[1444px]flex bg-gradient-to-b from-gray-50 to-[#d2d6db] overflow-y-scroll px-4 py-4"
+  >
+    <div class="w-full h-full flex flex-col grow bg-white rounded-md">
+      <div class="flex flex-col gap-12 px-4 py-12">
+        <!-- section 1: product images container -->
+        <div class="flex flex-col gap-6 self-stretch">
+          <!-- product image main -->
+          <div class="h-[400px] overflow-hidden">
+            <img
+              class="w-full h-full rounded-md object-cover"
+              src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/voyager-hoodie/voyager-hoodie-1.jpg"
+              alt=""
+            />
+          </div>
+          <!-- product image list -->
+          <div
+            id="img-list"
+            class="h-[120px] w-full flex gap-4 self-stretch overflow-x-scroll"
+          ></div>
+        </div>
+        <!-- section 2: product details container -->
+         <div class="flex flex-col gap-10">
+          <!-- product details -->
+           <div class="flex flex-col gap-8 justify-between">
+            <!-- product header container -->
+             <div class="flex flex-col gap-5 justify-between">
+              <!-- product name -->
+              <h2 class="font-semibold text-3xl text-neutral-900">Voyager Hoodie</h2>
+              <!-- product meta -->
+              <div class="flex flex-col items-start gap-2">
+                <!-- price container-->
+                  <div class="flex flex-col gap-2">
+                    <!-- price -->
+                    <div class="flex items-end gap-2">
+                    <span class="font-medium text-3xl text-neutral-600">$76</span>
+                  <span class="font-medium text-lg line-through text-neutral-400">$95</span>
+                  </div>
+                  <!-- promo -->
+                <div class="flex items-center justify-center bg-amber-50 px-2.5 py-1 rounded-full border border-solid border-amber-200 font-normal text-sm text-center text-amber-700">20% OFF</div>
+                
+                  </div>
+                  <!-- review -->
+                <div class="flex items-center gap-2">
+                  <span>4.1</span>
+                  <!-- stars -->
+                  <div 
+                  class="flex items-center justify-center gap-1"
+                  id="review-rating">
+                    <span class="w-5 h-5"><i class="ri-star-fill"></i></span>
+                    <span class="w-5 h-5"><i class="ri-star-fill"></i></span>
+                    <span class="w-5 h-5"><i class="ri-star-fill"></i></span>
+                    <span class="w-5 h-5"><i class="ri-star-fill"></i></span>
+                  </div>
+                  <!-- link -->
+                  <span
+                  ><a 
+                  class="font-normal text-sm text-indigo-700"
+                  href="#">See all 62 reviews</a></span>
+                </div>
+                  
+                </div>
+                
+              </div>
+              <!-- product spiel -->
+               <p class="font-normal text-base text-neutral-600">
+                The Voyager Hoodie is for the explorer at heart. Its durable fabric and roomy pockets are perfect for those who are always searching for the next adventure.</p>
+
+              <!-- product options -->
+               <div class="flex flex-col gap-8 justify-between">
+                <!-- color selection -->
+                <div class="flex flex-col gap-4">
+                  <h4 class="font-normal text-sm text-neutral-500">Available Colors</h4>
+                  <!-- color swatches -->
+                   <div
+                   id="color-swatch"
+                   class="flex gap-4 "
+                   >
+                    <button class="w-[38px] h-[38px] flex items-center justify-center bg-emerald-500 rounded-full text-white">
+                      <i 
+                      class="fa-solid fa-check"></i>
+                    </button>
+                    <button
+                    class="w-[38px] h-[38px] flex items-center justify-center bg-yellow-600 rounded-full text-white"
+                    ></button>
+                   </div>
+                </div>
+                <!-- sizes selection -->
+                <div class="flex flex-col gap-4">
+                  <h4 class="font-normal text-sm text-neutral-500">Available Sizes</h4>
+                  <!-- size options -->
+                  <div 
+                  class="flex flex-wrap gap-4"
+                  >
+                    
+                  <button class="w-16 flex justify-center items-center gap-1.5 bg-white px-5 py-3 rounded border border-solid border-indigo-600">XS</button>
+                  <button class="w-16 flex justify-center items-center gap-1.5 bg-white px-5 py-3 rounded border border-solid border-neutral-200">S</button>
+                  <button class="w-16 flex justify-center items-center gap-1.5 bg-white px-5 py-3 rounded border border-solid border-neutral-200">M</button>
+                  <button class="w-16 flex justify-center items-center gap-1.5 bg-white px-5 py-3 rounded border border-solid border-neutral-200">L</button>
+                  </div>
+                  <button class="w-16 flex justify-center items-center gap-1.5 bg-white px-5 py-3 rounded border border-solid border-neutral-200">XL</button>
+                  </div>
+                  <!-- quantity selection -->
+                <div class="flex flex-col gap-4 self-stretch">
+                   <h4 class="font-normal text-sm text-neutral-500">Quantity</h4>
+                   <div class="w-[125px] flex justify-center items-center gap-3 bg-neutral-50 p-0.5 rounded-md border border-solid border-neutral-200">
+                    <!-- decrease button -->
+                    <button id="decrease" class="flex justify-center items-center gap-2 rounded text-neutral-400"><i class="fa-solid fa-minus"></i></button>
+                    <span id="quantity" class="flex justify-center items-center gap-2 self-stretch w-[49px] px-3 py-1.5 rounded text-neutral-600">1</span>
+                    <!-- increase button -->
+                    <button id="increase" class="flex justify-center items-center gap-2 rounded text-neutral-400"><i class="fa-solid fa-plus"></i></button>
+                   </div>
+                </div>
+                </div>
+              <!-- add to cart button  -->
+               <button class="flex justify-center items-center gap-1.5 self-stretch bg-indigo-700 px-5 py-3 rounded font-medium text-base text-white">Add to Cart</button>
+               </div>
+               </div>
+           <!-- product accordion -->
+            <div class="flex flex-col gap-6 self-stretch">
+              <!-- accordion info section 1 -->
+              <div x-data="{ open: false }" class="flex w-full justify-between gap-6">
+              <!-- content -->
+              <div x-transition class="flex flex-col self-stretch gap-2 text-gray-700">
+                <h4 class="font-medium text-lg text-neutral-900">Feature</h4>
+                <div x-show="open">
+                  <ul 
+                  class="list-disc pl-5 space-y-1 font-normal text-base text-neutral-600"
+                  >
+                    <li class="list-disc">Designed for comfort and durability.</li>
+                    <li class="list-disc">Soft, breathable fabric ideal for travel and adventure.</li>
+                    <li class="list-disc">Large front pocket and adjustable hood.</li>
+                    <li class="list-disc">Minimalist design pairs well with any style.</li>
+                    <li class="list-disc">Made with eco-conscious materials.</li>
+                    
+                  </ul>
+                </div>
+              </div>
+              <button 
+                @click="open = !open" 
+                class="flex flex-col items-start justify-start"
+              >
+                <!-- <span>Feature</span> -->
+                <i class="ri-add-circle-line text-neutral-400 text-md" x-show="!open"></i>
+                <i class="fa-solid fa-circle-minus text-neutral-400" x-show="open"></i>
+              </button>
+            </div>
+            <!-- accordion info section 2 -->
+              <div x-data="{ open: false }" class="flex w-full justify-between gap-6 pt-6 border-t border-solid border-neutral-200">
+              <!-- content -->
+              <div x-transition class="flex flex-col self-stretch gap-2 text-gray-700">
+                <h4 class="font-medium text-lg text-neutral-900">Fabric & Care</h4>
+                <div x-show="open">
+                  <ul 
+                  class="list-disc pl-5 space-y-1 font-normal text-base text-neutral-600"
+                  >
+                    <li class="list-disc">Machine wash cold on a gentle cycle.</li>
+                    <li class="list-disc">Tumble dry low or hang to dry.</li>
+                    <li class="list-disc">Do not use fabric softeners or bleach.</li>
+                    <li class="list-disc">Iron on a low setting if necessary.</li>                    
+                  </ul>
+                </div>
+              </div>
+              <button 
+                @click="open = !open" 
+                class="flex flex-col items-start justify-start"
+              >
+                <!-- <span>Feature</span> -->
+                <i class="ri-add-circle-line text-neutral-400" x-show="!open"></i>
+                <i class="fa-solid fa-circle-minus text-neutral-400" x-show="open"></i>
+              </button>
+            </div>
+            <!-- accordion info section 3 -->
+              <div x-data="{ open: false }" class="flex w-full justify-between gap-6 pt-6 border-t border-solid border-neutral-200">
+              <!-- content -->
+              <div x-transition class="flex flex-col self-stretch gap-2 text-gray-700">
+                <h4 class="font-medium text-lg text-neutral-900">Shipping</h4>
+                <div x-show="open">
+                  <ul 
+                  class="list-disc pl-5 space-y-1 font-normal text-base text-neutral-600"
+                  >
+                    <li class="list-disc">Free standard shipping on all orders - no minimum spend required.</li>
+                    <li class="list-disc">Expedited shipping available at an additional cost.</li>
+                    <li class="list-disc">Packaged in biodegradable materials to reduce environmental impact.</li>
+                  </ul>
+                </div>
+              </div>
+              <button 
+                @click="open = !open" 
+                class="flex flex-col items-start justify-start"
+              >
+                <!-- <span>Feature</span> -->
+                <i class="ri-add-circle-line text-neutral-400" x-show="!open"></i>
+                <i class="fa-solid fa-circle-minus text-neutral-400" x-show="open"></i>
+              </button>
+            </div>
+             </div> 
+            </div>
+         </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- Attribute this challenge to yourself! -->
+    <div class="credits">
+      <!-- A challenge by
+      <a
+        href="https://www.greatfrontend.com/projects?ref=challenges"
+        target="_blank"
+        >GreatFrontEnd Projects</a
+      >.  -->
+      Built by
+      <a href="https://www.greatfrontend.com/u/your_username" target="_blank"
+        >Zhiyan Pei</a
+      >.
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
