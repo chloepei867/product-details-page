@@ -37,14 +37,14 @@
 
   </head>
   <body
-    class="h-[1444px]flex bg-gradient-to-b from-gray-50 to-[#d2d6db] overflow-y-scroll px-4 py-4"
+    class="flex bg-gradient-to-b from-gray-50 to-[#d2d6db] overflow-y-scroll px-4 py-4"
   >
-    <div class="w-full h-full flex flex-col grow bg-white rounded-md">
-      <div class="flex flex-col gap-12 px-4 py-12">
+    <div class="w-full h-full flex flex-col grow bg-white rounded-md lg:px-24 lg:py-24">
+      <div class="flex flex-col lg:flex-row lg:gap-8 gap-12 px-4 py-12">
         <!-- section 1: product images container -->
-        <div class="flex flex-col gap-6 self-stretch">
+        <div class="flex flex-col lg:w-[592px] gap-6 self-stretch">
           <!-- product image main -->
-          <div class="h-[400px] overflow-hidden">
+          <div class="h-[400px] md:h-[800px] lg:w-[592px] lg:h-[800px] overflow-hidden">
             <img
               class="w-full h-full rounded-md object-cover"
               src="https://vaqybtnqyonvlwtskzmv.supabase.co/storage/v1/object/public/e-commerce-track-images/voyager-hoodie/voyager-hoodie-1.jpg"
@@ -54,7 +54,7 @@
           <!-- product image list -->
           <div
             id="img-list"
-            class="h-[120px] w-full flex gap-4 self-stretch overflow-x-scroll"
+            class="h-[120px] md:h-[190px] w-full lg:w-[592px] flex gap-4 self-stretch overflow-x-scroll"
           ></div>
         </div>
         <!-- section 2: product details container -->
@@ -64,9 +64,9 @@
             <!-- product header container -->
              <div class="flex flex-col gap-5 justify-between">
               <!-- product name -->
-              <h2 class="font-semibold text-3xl text-neutral-900">Voyager Hoodie</h2>
+              <h2 class="font-semibold text-3xl md:text-5xl text-neutral-900">Voyager Hoodie</h2>
               <!-- product meta -->
-              <div class="flex flex-col items-start gap-2">
+              <div class="flex flex-col items-start gap-2 md:gap-3">
                 <!-- price container-->
                   <div class="flex flex-col gap-2">
                     <!-- price -->
@@ -80,7 +80,7 @@
                   </div>
                   <!-- review -->
                 <div class="flex items-center gap-2">
-                  <span>4.1</span>
+                  <span class="font-normal text-xl text-neutral-900">4.1</span>
                   <!-- stars -->
                   <div 
                   class="flex items-center justify-center gap-1"
@@ -112,7 +112,7 @@
                   <!-- color swatches -->
                    <div
                    id="color-swatch"
-                   class="flex gap-4 "
+                   class="flex gap-4"
                    >
                     <button class="w-[38px] h-[38px] flex items-center justify-center bg-emerald-500 rounded-full text-white">
                       <i 
@@ -135,8 +135,9 @@
                   <button class="w-16 flex justify-center items-center gap-1.5 bg-white px-5 py-3 rounded border border-solid border-neutral-200">S</button>
                   <button class="w-16 flex justify-center items-center gap-1.5 bg-white px-5 py-3 rounded border border-solid border-neutral-200">M</button>
                   <button class="w-16 flex justify-center items-center gap-1.5 bg-white px-5 py-3 rounded border border-solid border-neutral-200">L</button>
-                  </div>
                   <button class="w-16 flex justify-center items-center gap-1.5 bg-white px-5 py-3 rounded border border-solid border-neutral-200">XL</button>
+                  </div>
+                  
                   </div>
                   <!-- quantity selection -->
                 <div class="flex flex-col gap-4 self-stretch">
@@ -151,11 +152,10 @@
                 </div>
                 </div>
               <!-- add to cart button  -->
-               <button class="flex justify-center items-center gap-1.5 self-stretch bg-indigo-700 px-5 py-3 rounded font-medium text-base text-white">Add to Cart</button>
+               <button class="flex justify-center items-center gap-1.5 self-stretch bg-indigo-700 px-5 py-3 md:px-6 md:py-4 rounded font-medium text-base md:text-lg text-white">Add to Cart</button>
                </div>
-               </div>
-           <!-- product accordion -->
-            <div class="flex flex-col gap-6 self-stretch">
+          <!-- product accordion -->
+            <div class="flex flex-col gap-6 md:gap-8 self-stretch">
               <!-- accordion info section 1 -->
               <div x-data="{ open: false }" class="flex w-full justify-between gap-6">
               <!-- content -->
@@ -232,7 +232,9 @@
                 <i class="fa-solid fa-circle-minus text-neutral-400" x-show="open"></i>
               </button>
             </div>
-             </div> 
+             </div>
+               </div>
+            
             </div>
          </div>
       </div>

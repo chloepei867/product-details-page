@@ -10,7 +10,7 @@ fetch("./data/product-images.json")
     let str = "";
     data.forEach((item) => {
       str += `
-      <div class="w-20 h-[120px] flex-shrink-0">
+      <div class="w-20 h-[120px] md:w-[188px] md:h-[190px] lg:w-40 flex-shrink-0">
               <img
                 class="w-full h-full object-cover rounded-md"
                 src=${item.image_url}
